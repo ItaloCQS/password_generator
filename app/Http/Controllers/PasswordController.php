@@ -15,7 +15,7 @@ class PasswordController extends Controller
     {
         $length = $request->input('length', 12);
 
-        $characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()';
+        $characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ12345678910";
         $password = substr(str_shuffle(str_repeat($characters, $length)), 0, $length);
 
         return view('password.index', compact('password', 'length'));

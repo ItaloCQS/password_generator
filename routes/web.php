@@ -15,4 +15,4 @@ use App\Http\Controllers\PasswordController;
 */
 
 Route::get('/',[PasswordController::class,'index']);
-Route::post('/generate',[PasswordController::class,'generate'])->name('password.generate');
+Route::post('generate',[PasswordController::class,'generate'])->name('generate.password');
